@@ -8,11 +8,11 @@ $examScoreList = [
 ];
 $resultList = [];
 foreach ($examScoreList as $subject => $score) {
-    if($score >= 30) {
-        $resultList[] = $subject . 'は合格';
-    } else {
+    if ($score < 30) {
         $resultList[] = $subject . 'は不合格';
+        continue;
     }
+    $resultList[] = $subject . 'は合格';
 }
 echo implode('<br>', $resultList);
 
