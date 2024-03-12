@@ -1,12 +1,12 @@
 <?php
 $word = 'fuga';
 for ($i = 1; $i <= 6; $i++) {
-    if ($word == "hoge") {
-        if ($i % 2 != 0) {
+    if ($word == "hoge" && $i % 2 != 0) {
             echo "wordがhoge かつ " . $i . "は2の倍数以外です";
             echo '<br>';
             continue;
-        } 
+    }
+    if ($word == "hoge" && !($i % 2 != 0)) {
         echo "wordがhoge かつ " . $i . "は2の倍数です";
         continue;
     }
